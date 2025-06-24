@@ -51,7 +51,7 @@ The analysis involved:
 * **Data Loading & Cleaning:** Processing raw logistics data to handle missing values and inconsistencies.
 * **Feature Engineering:** Creating new features (e.g., `is_weekend`, `distance_per_hour`) to capture more granular insights.
 * **Descriptive Statistics:** Summarizing key numerical and categorical variables.
-* **Visualizations:** Employing various plots (bar charts, scatter plots, heatmaps) to uncover patterns and relationships.
+* **Visualizations:** Employing various plots (bar charts, scatter plots, heatmaps, line plots) to uncover patterns and relationships.
 * **Correlation Analysis:** Quantifying relationships between features.
 * **Insight Generation:** Deriving actionable conclusions from the visualized data.
 
@@ -65,26 +65,13 @@ Our analysis revealed several critical findings:
 | **Distance-Delay Relationship** | Delays are highly variable and not linearly correlated with distance; significant delays occur even on shorter routes. |
 | **Top Locations** | Key operational hubs like Gurgaon and Bangalore dominate traffic, requiring focused resource management.   |
 | **Operational Factors** | `Segment Factor`, `Actual Distance`, and `Route Type` are consistently identified as highly influential.   |
+| **Time-of-Day Dynamics** | `Segment Factor` varies significantly by hour, pointing to specific periods of operational complexity.     |
 
 ## Visual Insights 📈
 
 Below are some of the key visualizations generated during the data exploration phase, providing a deeper understanding of the Delhivery logistics dataset.
 
----
-
-### 1. Segment Delay Classification
-
-This chart provides an overview of the distribution of delivery segments based on their "On-Time" or "Delayed" status.
-
-![Segment Delay Classification](images/image_7688ea.png)
-
-**Insights:**
-* **Imbalance:** The dataset shows a significantly higher number of "Delayed" segments.
-* **Operational Focus:** This highlights delays as a primary operational challenge for optimization.
-
----
-
-### 2. Geographical Distribution of Carting Trips by Destination State
+### 1. Geographical Distribution of Carting Trips by Destination State
 
 This chart illustrates the volume of "Carting" type trips across different destination states.
 
@@ -96,7 +83,7 @@ This chart illustrates the volume of "Carting" type trips across different desti
 
 ---
 
-### 3. Segment Distance vs Delay
+### 2. Segment Distance vs Delay
 
 This scatter plot explores the relationship between the Segment Distance (OSRM Distance) and the Segment Delay.
 
@@ -108,7 +95,7 @@ This scatter plot explores the relationship between the Segment Distance (OSRM D
 
 ---
 
-### 4. Correlation Matrix of Segment Features
+### 3. Correlation Matrix of Segment Features
 
 This heatmap visualizes the correlation coefficients between various segment-level features.
 
@@ -120,7 +107,7 @@ This heatmap visualizes the correlation coefficients between various segment-lev
 
 ---
 
-### 5. Top 10 Source Locations
+### 4. Top 10 Source Locations
 
 This horizontal bar chart displays the top 10 most frequent source locations (hubs/cities) from which logistics segments originate.
 
@@ -129,6 +116,19 @@ This horizontal bar chart displays the top 10 most frequent source locations (hu
 **Insights:**
 * **Major Hubs:** Gurgaon-Bilaspur (Haryana) and Bangalore-Nelamangla (Karnataka) are the busiest source locations.
 * **Centralized Operations:** A large volume of trips originates from a limited number of hubs, implying a centralized or hub-and-spoke model for dispatch.
+
+---
+
+### 5. Average Segment Factor by Hour of Trip Creation
+
+This line plot illustrates how the average `Segment Factor` changes throughout the day based on the hour a trip was created.
+
+![Average Segment Factor by Hour of Trip Creation](images/image_776a5f.png)
+
+**Insights:**
+* **Diurnal Pattern:** The `Segment Factor` exhibits a clear daily pattern, with notable peaks and troughs throughout the 24-hour cycle.
+* **Peak Complexity Hours:** Higher average `Segment Factor` values are observed around 4-5 AM and again around 10-11 AM, suggesting these hours might correspond to periods of increased operational complexity or challenging segment characteristics.
+* **Operational Planning:** Understanding these hourly variations in segment complexity can help optimize scheduling, resource allocation, and route assignments to minimize potential issues during peak complexity periods.
 
 ---
 
