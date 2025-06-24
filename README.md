@@ -71,11 +71,15 @@ Our analysis revealed several critical findings:
 
 Below are some of the key visualizations generated during the data exploration phase, providing a deeper understanding of the Delhivery logistics dataset.
 
+---
+
+---
+
 ### 1. Geographical Distribution of Carting Trips by Destination State
 
 This chart illustrates the volume of "Carting" type trips across different destination states.
 
-![Number of Carting Trips by Destination State](images/image_76884b.png)
+![Number of Carting Trips by Destination State](https://raw.githubusercontent.com/Onabanjomicheal/Delivery-Logistics-Data-Analysis/main/Picture1.png)
 
 **Insights:**
 * **Top States:** Karnataka, Maharashtra, and Haryana are key destinations for Carting trips.
@@ -87,7 +91,7 @@ This chart illustrates the volume of "Carting" type trips across different desti
 
 This scatter plot explores the relationship between the Segment Distance (OSRM Distance) and the Segment Delay.
 
-![Segment Distance vs Delay](images/image_76db9d.png)
+![Top 10 Source Locations](https://raw.githubusercontent.com/Onabanjomicheal/Delivery-Logistics-Data-Analysis/main/Picture5.png)
 
 **Insights:**
 * **Variable Delays:** Delays show high variability, not a strict increase with distance.
@@ -99,7 +103,7 @@ This scatter plot explores the relationship between the Segment Distance (OSRM D
 
 This heatmap visualizes the correlation coefficients between various segment-level features.
 
-![Correlation Matrix with Segment Actual Time](images/image_76e2fd.png)
+![Segment Delay Classification](https://raw.githubusercontent.com/Onabanjomicheal/Delivery-Logistics-Data-Analysis/main/Picture2.png)
 
 **Insights:**
 * **Strong Feature Linkages:** `actual_time`, `osrm_time`, and `osrm_distance` are highly correlated, as expected.
@@ -111,7 +115,7 @@ This heatmap visualizes the correlation coefficients between various segment-lev
 
 This horizontal bar chart displays the top 10 most frequent source locations (hubs/cities) from which logistics segments originate.
 
-![Top 10 Source Locations](images/image_76e621.png)
+![Correlation Matrix with Segment Actual Time](https://raw.githubusercontent.com/Onabanjomicheal/Delivery-Logistics-Data-Analysis/main/Picture4.png)
 
 **Insights:**
 * **Major Hubs:** Gurgaon-Bilaspur (Haryana) and Bangalore-Nelamangla (Karnataka) are the busiest source locations.
@@ -123,7 +127,7 @@ This horizontal bar chart displays the top 10 most frequent source locations (hu
 
 This line plot illustrates how the average `Segment Factor` changes throughout the day based on the hour a trip was created.
 
-![Average Segment Factor by Hour of Trip Creation](images/image_776a5f.png)
+![Segment Distance vs Delay](https://raw.githubusercontent.com/Onabanjomicheal/Delivery-Logistics-Data-Analysis/main/Picture3.png)
 
 **Insights:**
 * **Diurnal Pattern:** The `Segment Factor` exhibits a clear daily pattern, with notable peaks and troughs throughout the 24-hour cycle.
